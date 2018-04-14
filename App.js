@@ -1,44 +1,19 @@
-import React from 'react';
-import {StyleSheet, Text, View, Button} from 'react-native';
-import {StackNavigator} from 'react-navigation';
+import React, { Component} from 'react';
+import {List} from "./Components/Views/List";
 
-class App extends React.Component {
+export default class App extends Component {
     constructor(props) {
         super(props);
-        this.state = {};
-        this.goToNotes = this.goToNotes.bind(this);
+        this.state = {
+            notes : [],
+            view : List,
+        };
     }
-
-    goToNotes() {
-
-    }
-
-
     render() {
-        return (
-            <View style={styles.container}>
-                <Text>Welcom to Note Stuff</Text>
-                <Button
-                    onPress={this.goToNotes}
-                    title="Go to Notes"
-                />
-            </View>
-        );
+        return <this.state.view
+            notes={this.state.notes}
+        />;
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        // justifyContent: 'center',
-    },
-});
 
-export default StackNavigator({
-    Home: {
-        screen: App,
-    },
-    Notes: {screeen: Notes}
-});
