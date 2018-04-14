@@ -11,7 +11,7 @@ export function List(props) {
         <View style={STYLES}>
             <Text>list view</Text>
             <Button
-                title="Go to list of notes"
+                title="Go to notes"
                 onPress={props.showNoteView}
             />
         </View>

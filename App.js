@@ -1,6 +1,6 @@
 import React, { Component} from 'react';
-import {List} from "./Components/Views/List";
-import {Note} from "./Components/Views/Note";
+import {List} from "./components/views/List";
+import {Note} from "./components/views/Note";
 
 export default class App extends Component {
     constructor(props) {
