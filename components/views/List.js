@@ -11,10 +11,6 @@ export function ListView({showNoteView, notes}) {
     return (
         <View style={styles}>
             <Text>list view</Text>
-            <Button
-                title="Go to notes"
-                onPress={showNoteView}
-            />
             {notes.map((note, i) => {
                 return <NoteOverview
                     note={note}

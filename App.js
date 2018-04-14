@@ -10,7 +10,7 @@ export default class App extends Component {
         this.state = {
             notes: [testNote,],
             view: ListView,
-            currentIndex: 0,
+            currentNote: undefined,
         };
         this.showNoteView = this.showNoteView.bind(this);
         this.showListView = this.showListView.bind(this);
@@ -20,7 +20,7 @@ export default class App extends Component {
     showNoteView(index) {
         this.setState({
             view: NoteView,
-            currentIndex: index,
+            currentNote: this.state.notes[index],
         });
     }
 
@@ -37,7 +37,7 @@ export default class App extends Component {
         return <this.state.view
             notes={this.state.notes}
             showNoteView={this.showNoteView}
-            currentIndex={this.state.currentIndex}
+            currentNote={this.state.currentNote}
             showListView={this.showListView}
             createNote={this.createNote}
         />;
