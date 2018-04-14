@@ -9,11 +9,11 @@ export function NoteView(props) {
     };
     return (
         <View style={STYLES}>
+            <Text>Note view</Text>
             <Button
                 title="Go to list of notes"
                 onPress={props.showListView}
             />
-            <Text>Note view</Text>
         </View>
     );
 }

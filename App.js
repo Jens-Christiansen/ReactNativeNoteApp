@@ -6,8 +6,9 @@ import {Note} from "./models/Note";
 export default class App extends Component {
     constructor(props) {
         super(props);
+        const testNote = new Note('stuff', 'test');
         this.state = {
-            notes: [],
+            notes: [testNote,],
             view: ListView,
         };
         this.showNoteView = this.showNoteView.bind(this);
@@ -24,7 +25,7 @@ export default class App extends Component {
     }
 
     createNote(title, body) {
-        const note = new Note({...});
+        const note = new Note(title, body);
         this.setState({notes: this.state.push(note)});
     }
 
