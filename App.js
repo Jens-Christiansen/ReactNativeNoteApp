@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {ListView} from "./components/views/List";
 import {NoteView} from "./components/views/Note";
 import {Note} from "./models/Note";
+import {CreateNoteView} from "./components/views/CreateNote";
 
 export default class App extends Component {
     constructor(props) {
@@ -15,6 +16,7 @@ export default class App extends Component {
         this.showNoteView = this.showNoteView.bind(this);
         this.showListView = this.showListView.bind(this);
         this.createNote = this.createNote.bind(this);
+        this.showCreateNote = this.showCreateNote.bind(this);
     }
 
     showNoteView(index) {
@@ -29,8 +31,17 @@ export default class App extends Component {
     }
 
     createNote(title, body) {
-        const note = new Note(title, body);
-        this.setState({notes: this.state.push(note)});
+        const newNote = new Note(title, body);
+        let notes = this.state.notes.map(note => note);
+        notes.unshift(newNote);
+        this.setState({
+            notes: notes,
+            view: ListView,
+        });
+    }
+
+    showCreateNote(){
+        this.setState({view: CreateNoteView})
     }
 
     render() {
@@ -40,6 +51,7 @@ export default class App extends Component {
             currentNote={this.state.currentNote}
             showListView={this.showListView}
             createNote={this.createNote}
+            showCreateNoteView={this.showCreateNote}
         />;
     }
 }
