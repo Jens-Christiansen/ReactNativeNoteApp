@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {View, TextInput, Text, Button} from 'react-native';
 import {inputs} from "../../styles/inputs";
+import {views} from "../../styles/views";
 
 export class CreateNoteView extends Component {
     constructor(props) {
@@ -10,19 +11,11 @@ export class CreateNoteView extends Component {
             title: '',
             body: '',
         };
-
-        this.styles = {
-            view: {
-                flex: 1,
-                alignItems: 'center',
-                justifyContent: 'center',
-            },
-        };
     }
 
     render() {
         return (
-            <View style={this.styles.view}>
+            <View style={views.view}>
                 <Text>Title</Text>
                 <TextInput
                     style={inputs.textInput}
@@ -33,6 +26,7 @@ export class CreateNoteView extends Component {
                 <TextInput
                     style={inputs.textArea}
                     value={this.state.body}
+                    multiline={true}
                     onChangeText={text => this.setState({body: text})}
                 />
                 <Button

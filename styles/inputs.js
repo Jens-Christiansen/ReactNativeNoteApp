@@ -1,11 +1,13 @@
 const borderWidth = 1;
 const borderColor = "gray";
-const width = "80%";
+const width = "100%";
 
 const common = {
     borderWidth: borderWidth,
     borderColor: borderColor,
     width: width,
+    paddingVertical: 4,
+    paddingHorizontal: 10,
 };
 
 const textInput = {
