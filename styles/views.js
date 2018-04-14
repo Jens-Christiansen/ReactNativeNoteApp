@@ -8,9 +8,9 @@ const common = {
 };
 
 const view = {
-        flex: 1,
-        justifyContent: 'flex-start',
-    };
+    flex: 1,
+    justifyContent: 'flex-start',
+};
 
 export const views = {
     view: Object.assign({}, common, view),

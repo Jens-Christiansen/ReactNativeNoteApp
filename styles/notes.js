@@ -1,8 +1,6 @@
 import {variables} from "./_variables";
 
-const common = {
-
-};
+const common = {};
 
 const noteOverview = {
     backgroundColor: variables.colors.lightgray,
