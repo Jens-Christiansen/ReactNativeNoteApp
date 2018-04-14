@@ -33,6 +33,10 @@ export class CreateNoteView extends Component {
                     title="Save Note"
                     onPress={() => this.props.createNote(this.state.title, this.state.body)}
                 />
+                <Button
+                    title="Cancel"
+                    onPress={this.props.showListView}
+                />
             </View>
         );
     }

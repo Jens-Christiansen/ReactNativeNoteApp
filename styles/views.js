@@ -1,4 +1,7 @@
+import {variables} from "./_variables";
+
 const common = {
+    backgroundColor: variables.colors.white,
     marginTop: 40,
     paddingHorizontal: 40,
     paddingVertical: 10,

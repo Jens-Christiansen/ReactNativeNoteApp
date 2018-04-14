@@ -7,13 +7,8 @@ import {CreateNoteView} from "./components/views/CreateNote";
 export default class App extends Component {
     constructor(props) {
         super(props);
-        const note1 = new Note("I'm the note", "This is my body.");
-        const note2 = new Note("I'm Jens.", "They call me Jens.");
         this.state = {
-            notes: [
-                note1,
-                note2,
-            ],
+            notes: [],
             view: ListView,
             currentNote: undefined,
         };
