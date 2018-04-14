@@ -1,6 +1,6 @@
 export class Note {
-    constructor() {
-        this.title = '';
-        this.body = '';
+    constructor(title, body) {
+        this.title = title;
+        this.body = body;
     }
 }
