@@ -1,23 +1,26 @@
-import React, { Component} from 'react';
-import {List} from "./components/views/List";
-import {Note} from "./components/views/Note";
+import React, {Component} from 'react';
+import {ListView} from "./components/views/List";
+import {NoteView} from "./components/views/Note";
 
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            notes : [],
-            view : List,
+            notes: [],
+            view: ListView,
         };
         this.showNoteView = this.showNoteView.bind(this);
         this.showListView = this.showListView.bind(this);
     }
-    showNoteView(){
-       this.setState({view: Note});
+
+    showNoteView() {
+        this.setState({view: NoteView});
     }
-    showListView(){
-       this.setState({view: List});
+
+    showListView() {
+        this.setState({view: ListView});
     }
+
     render() {
         return <this.state.view
             notes={this.state.notes}

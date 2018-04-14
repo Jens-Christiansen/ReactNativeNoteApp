@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native';
 
-export function Note(props) {
+export function NoteView(props) {
     const STYLES = {
         flex: 1,
         alignItems: 'center',
