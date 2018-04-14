@@ -29,7 +29,6 @@ export class CreateNoteView extends Component {
                 borderWidth: 1
             },
         };
-
     }
 
     render() {
