@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 
 export function Note(props) {
     const STYLES = {
@@ -9,6 +9,10 @@ export function Note(props) {
     };
     return (
         <View style={STYLES}>
+            <Button
+                title="Go to list of notes"
+                onPress={props.showListView}
+            />
             <Text>Note view</Text>
         </View>
     );

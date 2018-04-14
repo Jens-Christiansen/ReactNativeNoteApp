@@ -1,16 +1,20 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Button} from 'react-native';
 
 export function List(props) {
     const STYLES = {
-     flex: 1,
-     alignItems: 'center',
-     justifyContent: 'center',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
     };
     return (
-      <View style={STYLES}>
-          <Text>list view</Text>
-      </View>
-    );
+        <View style={STYLES}>
+            <Text>list view</Text>
+            <Button
+                title="Go to list of notes"
+                onPress={props.showNoteView}
+            />
+        </View>
+);
 }
 
