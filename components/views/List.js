@@ -15,7 +15,14 @@ export function ListView({showNoteView, notes}) {
                 title="Go to notes"
                 onPress={showNoteView}
             />
-            {notes.map((note, i) => <NoteOverview note={note} key={'noteOverview' + i}/>)}
+            {notes.map((note, i) => {
+                return <NoteOverview
+                    note={note}
+                    key={'noteOverview' + i}
+                    showNoteView={() => showNoteView(i)}
+
+                />;
+            })}
         </View>
     );
 }
