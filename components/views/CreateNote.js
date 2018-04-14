@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, TextInput, Text, Button} from 'react-native';
+import {inputs} from "../../styles/inputs";
 
 export class CreateNoteView extends Component {
     constructor(props) {
@@ -16,18 +17,6 @@ export class CreateNoteView extends Component {
                 alignItems: 'center',
                 justifyContent: 'center',
             },
-            title: {
-                height: 40,
-                width: '80%',
-                borderColor: 'gray',
-                borderWidth: 1
-            },
-            body: {
-                height: 40,
-                width: '80%',
-                borderColor: 'gray',
-                borderWidth: 1
-            },
         };
     }
 
@@ -36,13 +25,13 @@ export class CreateNoteView extends Component {
             <View style={this.styles.view}>
                 <Text>Title</Text>
                 <TextInput
-                    style={this.styles.title}
+                    style={inputs.textInput}
                     vlaue={this.state.title}
                     onChangeText={text => this.setState({title: text})}
                 />
                 <Text>Body</Text>
                 <TextInput
-                    style={this.styles.body}
+                    style={inputs.textArea}
                     value={this.state.body}
                     onChangeText={text => this.setState({body: text})}
                 />
