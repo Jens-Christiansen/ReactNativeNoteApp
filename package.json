@@ -1,5 +1,5 @@
 {
-  "name": "SampleProject",
+  "name": "NoteNinja",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -13,7 +13,8 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
-    "test": "jest"
+    "test": "jest",
+    "react-native": "react-native"
   },
   "jest": {
     "preset": "jest-expo"
@@ -21,6 +22,7 @@
   "dependencies": {
     "expo": "^26.0.0",
     "react": "16.3.0-alpha.1",
-    "react-native": "0.54.0"
+    "react-native": "0.54.0",
+    "react-native-fbsdk": "^0.7.0"
   }
 }
